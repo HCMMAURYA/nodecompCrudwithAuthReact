@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './component/footer/footer';
+import Header from './component/header/header';
+import ProtectedRoute from './component/protectedRoute/protecteRoute';
+import Dashboard from './pages/dashboard/dashboard';
+import Edit from './pages/edit/edit';
+import LoginForm from './pages/login/login';
+import Registration from './pages/registration/registration';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Header />
+
+				<Routes>
+					<Route path="/login" element={<LoginForm />} />
+					<Route path="/register" element={<Registration />} />
+					<Route path="/edit" element={<Edit />} />
+					<Route
+						path="/dashboard"
+						element={<ProtectedRoute Component={Dashboard} />}
+					/>
+				</Routes>
+				<Footer />
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

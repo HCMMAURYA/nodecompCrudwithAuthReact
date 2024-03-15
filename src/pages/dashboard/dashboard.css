@@ -1,0 +1,40 @@
+
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
+
+
+.user{
+	margin-left: 3%;
+	margin-top: 1%;
+}
+
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 90%;
+	margin-left: 3%;
+	margin-top: 1%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+	background-color: #dddddd;
+  }
+
+  .btn{
+	margin-left: 10px;
+  }
+
+
+  .hari{
+	float: right;
+	margin-right: 10%;
+  }
